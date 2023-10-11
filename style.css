@@ -1,0 +1,89 @@
+/* GRID SYSTEM */
+main {
+
+    display: grid;
+    grid-template-areas: 
+        "topbar topbar topbar"
+        "ads cont sidebar"
+        "footer footer footer";
+    
+    grid-template-columns: 1fr 3fr 1fr;
+
+    grid-template-rows: 50px auto 75.5px;
+    grid-gap: 8px;
+
+    align-items: center;
+    justify-content: center;
+
+}
+body{
+    background-color: aliceblue;
+}
+
+header {grid-area: topbar; }
+aside {
+    grid-area: ads;
+    align-items: center;
+    justify-self: center;
+}
+article {grid-area: cont; 
+    align-items: center;
+    justify-self: center;
+} /*cont is an abbreviation for content*/
+nav {
+    grid-area: sidebar;
+}
+footer {
+    grid-area: footer; 
+    justify-content: left;
+    align-self: center;
+    display: flex;
+}
+
+/* TOP ROW (Topbar) */
+.logo-name {
+    margin: 10px 10px 10px 70px;
+}
+.footer-flex{
+    display: inline;
+}
+
+/* MIDROW (aside/ads, article/cont, sidebar/nav)*/
+.advertise{
+    display: flex;
+    width: 80%;
+    height: 500px;
+
+    justify-content: center;
+    align-items: center;
+    grid-row: inherit;
+    grid-column: inherit;
+}
+
+/* BOTTOM ROW (Footer)*/
+.footer-disclaimer{
+    font-size: 10px;
+}
+.fd1 {
+    display: inline-flex;
+}
+
+/* FONTS & STYLES*/
+
+h1 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 40px;
+}
+
+p {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
