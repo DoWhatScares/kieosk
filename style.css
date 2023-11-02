@@ -1,89 +1,60 @@
-/* GRID SYSTEM */
-main {
+body {
+    background-color: white;
+}
 
+main {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "topbar topbar topbar"
         "ads cont sidebar"
-        "footer footer footer";
-    
-    grid-template-columns: 1fr 3fr 1fr;
-
-    grid-template-rows: 50px auto 75.5px;
-    grid-gap: 8px;
-
-    align-items: center;
-    justify-content: center;
-
+        "foot foot foot";
 }
-body{
-    background-color: aliceblue;
+header  { grid-area: topbar; }
+aside   { grid-area: ads; }
+article { grid-area: cont; }
+nav     { grid-area: sidebar; }
+footer  { grid-area: foot; }
+
+header {
+    grid-area: topbar;
+    grid-column: 2 / span 1;
 }
 
-header {grid-area: topbar; }
-aside {
-    grid-area: ads;
-    align-items: center;
-    justify-self: center;
-}
-article {grid-area: cont; 
-    align-items: center;
-    justify-self: center;
-} /*cont is an abbreviation for content*/
-nav {
-    grid-area: sidebar;
-}
-footer {
-    grid-area: footer; 
-    justify-content: left;
-    align-self: center;
-    display: flex;
+.logoH1 {
+    margin-top: 42px;
+    margin-bottom: 10px;
+    font-size: 53px;
+
+    font-family: 'Ultra', serif;
 }
 
-/* TOP ROW (Topbar) */
-.logo-name {
-    margin: 10px 10px 10px 70px;
+.contA {
+    padding: 0 10px;
 }
-.footer-flex{
-    display: inline;
+.cont {
+    margin-top: 20px;
 }
-
-/* MIDROW (aside/ads, article/cont, sidebar/nav)*/
-.advertise{
-    display: flex;
-    width: 80%;
-    height: 500px;
-
-    justify-content: center;
-    align-items: center;
-    grid-row: inherit;
-    grid-column: inherit;
+footer div p {
+    display: inline-block;
+    margin: 0 6px;
 }
-
-/* BOTTOM ROW (Footer)*/
-.footer-disclaimer{
-    font-size: 10px;
+footer div {
+    margin: 110px 0 5px;
 }
-.fd1 {
-    display: inline-flex;
-}
-
-/* FONTS & STYLES*/
-
-h1 {
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 40px;
-}
-
-p {
-    font-family: 'Space Mono', monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-
-a {
-    text-decoration: none;
+footer a {
     color: gray;
+}
+
+h3 {
+    font-family: 'Work Sans', sans-serif;
+}
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+}
+p {
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    font-weight: 100;
+    font-size: 12px;
 }
